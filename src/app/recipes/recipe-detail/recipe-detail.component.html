@@ -20,9 +20,11 @@
         Manege Recipe <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
-        <li><a href="#" (click)="toShoppingList()">Add Ingredients to shopping list</a></li>
-        <li><a href="#">Edit Recipe</a></li>
-        <li><a href="#">Delete Recipe</a></li>
+        <li>
+          <a (click)="toShoppingList()">Add Ingredients to shopping list</a>
+        </li>
+        <li><a routerLink="edit">Edit Recipe</a></li>
+        <li><a>Delete Recipe</a></li>
       </ul>
     </div>
   </div>
@@ -34,7 +36,7 @@
   <div class="col-xs-12">
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let ingredient of recipe.ingredients">
-        {{ingredient.name}} : {{ingredient.amount}}
+        {{ ingredient.name }} : {{ ingredient.amount }}
       </li>
     </ul>
   </div>
