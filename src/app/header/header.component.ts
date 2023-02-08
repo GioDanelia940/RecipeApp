@@ -6,14 +6,10 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  @Output() pageName = new EventEmitter<string>();
   isOpen = false;
   toggleOpen() {
     this.isOpen = true;
   }
   constructor() {}
-  displayPage(name: string) {
-    this.pageName.emit(name);
-  }
   ngOnInit(): void {}
 }

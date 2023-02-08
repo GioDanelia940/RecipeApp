@@ -9,8 +9,4 @@ export class AppComponent {
   title = 'RecipeApp';
 
   currentPage: string = 'recipe';
-  setPage(name: string) {
-    this.currentPage = name;
-    console.log(name);
-  }
 }
